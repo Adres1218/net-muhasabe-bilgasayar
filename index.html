@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Muhasebe - Akıllı Muhasebe Çözümleri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Ana Stil Ayarları */
+        :root {
+            --primary-color: #007bff; /* Kurumsal Mavi */
+            --secondary-color: #28a745; /* Yeşil Vurgu */
+            --background-color: #f8f9fa; /* Açık Gri Arka Plan */
+            --text-color: #343a40; /* Koyu Gri Metin */
+            --dark-color: #1c2a38;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Başlık (Hero) Bölümü */
+        #hero {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        #hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        #hero p {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+        
+        /* Genel Bölüm Stilleri */
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        section h2 {
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        section h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Özellikler Bölümü */
+        .features-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h3 {
+            color: var(--dark-color);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        /* Nasıl Çalışır Bölümü */
+        .how-it-works-step {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-right: 20px;
+            background: #e6f0ff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .step-content h3 {
+            color: var(--dark-color);
+            margin-top: 0;
+        }
+        
+        /* İndirme Bölümü (CTA) */
+        #download {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0;
+        }
+        
+        #download h2 {
+            color: white;
+        }
+        
+        #download h2::after {
+            background-color: white;
+        }
+
+        /* İndirme Butonu: Üç boyutlu his ve dinamik animasyon */
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 0;
+            max-width: 350px;
+            padding: 18px 45px;
+            background-color: var(--secondary-color); /* Yeşil */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.4em;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            box-shadow: 0 5px 0 0 #1e7e34; /* Koyu Yeşil 3D gölge */
+            border: none;
+        }
+
+        .download-btn i {
+            margin-right: 12px;
+            font-size: 1.1em;
+        }
+
+        .download-btn:hover {
+            background-color: #1e7e34;
+            box-shadow: 0 3px 0 0 #135223;
+            transform: translateY(2px);
+        }
+        
+        .download-info {
+            font-size: 0.9em;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="hero">
+        <div class="container">
+            <h1>Net Muhasebe: Finansal Zekanın Yeni Adresi</h1>
+            <p>Küçük ve orta ölçekli işletmeler için akıllı, hızlı ve kullanımı kolay muhasebe yazılımı.</p>
+            <a href="#download" class="download-btn">
+                <i class="fas fa-arrow-alt-circle-down"></i>
+                Hemen İndirmeye Başla
+            </a>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <h2>Neden Net Muhasebe? Güçlü Özellikler</h2>
+            <div class="features-grid">
+                
+                <div class="feature-item">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Kolay Fatura Yönetimi</h3>
+                    <p>Fatura kesmek, almak ve takip etmek artık çocuk oyuncağı. Tüm belgeleriniz dijital ortamda güvende.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Anlık Raporlama</h3>
+                    <p>İşletmenizin finansal durumunu gerçek zamanlı grafikler ve detaylı raporlarla hemen görün.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Tam Entegrasyon</h3>
+                    <p>Banka hesaplarınız, e-defter ve e-fatura sistemleri ile sorunsuz ve otomatik entegrasyon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" style="background-color: #f0f4f7;">
+        <div class="container">
+            <h2>Kullanıma Başlamak Çok Kolay</h2>
+            
+            <div class="how-it-works-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Setup Dosyasını İndirin</h3>
+                    <p>Aşağıdaki İndir butonuna tıklayarak Setup.exe dosyasını bilgisayarınıza kaydedin.</p>
+                </div>
+            </div>
+            
+            <div class="how-it-works-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Kurulumu Başlatın</h3>
+                    <p>İndirdiğiniz dosyayı çalıştırın ve birkaç basit adımla programı bilgisayarınıza kurun.</p>
+                </div>
+            </div>
+            
+            <div class="how-it-works-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Hemen Kullanmaya Başlayın</h3>
+                    <p>Kurulum bittikten sonra yazılımı açın, bilgilerinizi girin ve muhasebenizi yönetmeye başlayın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="container">
+            <h2>Hemen Ücretsiz Denemeye Başlayın</h2>
+            <p>Kurulum dosyasına doğrudan erişin ve **Net Muhasebe** ile finansal işlemlerinizi düzene sokun.</p>
+            
+            <a href="Setup.exe" download class="download-btn">
+                <i class="fas fa-download"></i>
+                Setup.exe İndir (55 MB)
+            </a>
+            
+            <div class="download-info">Windows Uyumludur. Tüm dosyalar virüs taramasından geçmiştir.</div>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,1 +1,1 @@
-[Setup.exe indir](https://github.com/Adres1218/net-muhasabe-bilgasayar/releases/download/v1.0.0/Setup.exe)
+[Setup.exe indir](https://drive.google.com/file/d/1pFrl8ecU37MApSRAXWK-ydhcM1sRJ6gk/view?usp=drive_link)
